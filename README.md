@@ -1,4 +1,4 @@
-# Practice-AI
+# Practice_Code
 
-Deep Learning 위주로 공부
-실습 자료 
+Deep Learning, Reinforcement Learning, Python기초, Python algorithm
+
