@@ -1,11 +1,5 @@
 import gym
 import numpy as np
-# Following is commented out due to the conflict between pyplot and cv2.imshow
-'''
-import matplotlib
-matplotlib.use('GTKAgg')
-import matplotlib.pyplot as plt
-'''
 from gym.envs.registration import register
 import random as pr
 import cv2
