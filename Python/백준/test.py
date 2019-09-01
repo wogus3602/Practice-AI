@@ -1,26 +1,13 @@
 import sys
-
-left = []
-right = []
-
-word = list(sys.stdin.readline().strip())
-num = int(sys.stdin.readline())
-
-left = word
-
-for i in range(num):
-    line = sys.stdin.readline().split()
-    if line[0]=='L':
-        if left:
-            right.append(left.pop())
-    elif line[0]=='P':
-        left.append(line[1])
-    elif line[0]=='D':
-        if right:
-            left.append(right.pop())
-    elif line[0]=='B':
-        if left:
-            left.pop()
-
-right.reverse()
-sys.stdout.write(''.join(left) + ''.join(right))
+N, K = map(int, input().split()) # 7 3
+people = list(range(1, N+1))
+result = []
+i = K-1    # i = 2
+while True:
+    result.append(people.pop(i))
+    if not people:
+        break
+    i = (i+K-1) % len(people)   # 2 + 3 - 1 = 4   4 % 6 = 6
+    print(i)
+    print(people)
+print('<'+', '.join(map(str, result))+'>')
